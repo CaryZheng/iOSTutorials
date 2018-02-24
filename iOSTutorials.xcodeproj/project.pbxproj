@@ -17,6 +17,7 @@
 		4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AE120416BAF00637DE0 /* LThread.swift */; };
 		4ACE969120416DFC007E507D /* RThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969020416DFC007E507D /* RThread.swift */; };
 		4ACE96932041731C007E507D /* ConditionLockThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96922041731C007E507D /* ConditionLockThread.swift */; };
+		4ACE969520417924007E507D /* ConditionThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969420417924007E507D /* ConditionThread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4A9F2AE120416BAF00637DE0 /* LThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LThread.swift; sourceTree = "<group>"; };
 		4ACE969020416DFC007E507D /* RThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RThread.swift; sourceTree = "<group>"; };
 		4ACE96922041731C007E507D /* ConditionLockThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionLockThread.swift; sourceTree = "<group>"; };
+		4ACE969420417924007E507D /* ConditionThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionThread.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				4A9F2AE120416BAF00637DE0 /* LThread.swift */,
 				4ACE969020416DFC007E507D /* RThread.swift */,
 				4ACE96922041731C007E507D /* ConditionLockThread.swift */,
+				4ACE969420417924007E507D /* ConditionThread.swift */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */,
 				4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */,
 				4A9F2ADA20415BEA00637DE0 /* HomeViewController.swift in Sources */,
+				4ACE969520417924007E507D /* ConditionThread.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
