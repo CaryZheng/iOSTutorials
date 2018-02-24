@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC22041591400637DE0 /* AppDelegate.swift */; };
-		4A9F2AC52041591400637DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC42041591400637DE0 /* ViewController.swift */; };
-		4A9F2AC82041591400637DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC62041591400637DE0 /* Main.storyboard */; };
 		4A9F2ACA2041591400637DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC92041591400637DE0 /* Assets.xcassets */; };
 		4A9F2ACD2041591400637DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2ACB2041591400637DE0 /* LaunchScreen.storyboard */; };
+		4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AD7204159F700637DE0 /* ThreadViewController.swift */; };
+		4A9F2ADA20415BEA00637DE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AD920415BEA00637DE0 /* HomeViewController.swift */; };
+		4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2ADC20415C4400637DE0 /* ZViewController.swift */; };
+		4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2ADF2041667400637DE0 /* MyThread.swift */; };
+		4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AE120416BAF00637DE0 /* LThread.swift */; };
+		4ACE969120416DFC007E507D /* RThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969020416DFC007E507D /* RThread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A9F2ABF2041591400637DE0 /* iOSTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9F2AC22041591400637DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A9F2AC42041591400637DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A9F2AC72041591400637DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A9F2AC92041591400637DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A9F2ACC2041591400637DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A9F2ACE2041591400637DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A9F2AD7204159F700637DE0 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		4A9F2AD920415BEA00637DE0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4A9F2ADC20415C4400637DE0 /* ZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZViewController.swift; sourceTree = "<group>"; };
+		4A9F2ADF2041667400637DE0 /* MyThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyThread.swift; sourceTree = "<group>"; };
+		4A9F2AE120416BAF00637DE0 /* LThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LThread.swift; sourceTree = "<group>"; };
+		4ACE969020416DFC007E507D /* RThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RThread.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		4A9F2AC12041591400637DE0 /* iOSTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				4A9F2ADE2041666B00637DE0 /* Thread */,
+				4A9F2ADB20415C3700637DE0 /* Base */,
+				4A9F2AD6204159DA00637DE0 /* ViewController */,
 				4A9F2AC22041591400637DE0 /* AppDelegate.swift */,
-				4A9F2AC42041591400637DE0 /* ViewController.swift */,
-				4A9F2AC62041591400637DE0 /* Main.storyboard */,
 				4A9F2AC92041591400637DE0 /* Assets.xcassets */,
 				4A9F2ACB2041591400637DE0 /* LaunchScreen.storyboard */,
 				4A9F2ACE2041591400637DE0 /* Info.plist */,
 			);
 			path = iOSTutorials;
+			sourceTree = "<group>";
+		};
+		4A9F2AD6204159DA00637DE0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F2AD920415BEA00637DE0 /* HomeViewController.swift */,
+				4A9F2AD7204159F700637DE0 /* ThreadViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A9F2ADB20415C3700637DE0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F2ADC20415C4400637DE0 /* ZViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4A9F2ADE2041666B00637DE0 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F2ADF2041667400637DE0 /* MyThread.swift */,
+				4A9F2AE120416BAF00637DE0 /* LThread.swift */,
+				4ACE969020416DFC007E507D /* RThread.swift */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +161,6 @@
 			files = (
 				4A9F2ACD2041591400637DE0 /* LaunchScreen.storyboard in Resources */,
 				4A9F2ACA2041591400637DE0 /* Assets.xcassets in Resources */,
-				4A9F2AC82041591400637DE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +171,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A9F2AC52041591400637DE0 /* ViewController.swift in Sources */,
 				4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */,
+				4ACE969120416DFC007E507D /* RThread.swift in Sources */,
+				4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */,
+				4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */,
+				4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */,
+				4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */,
+				4A9F2ADA20415BEA00637DE0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4A9F2AC62041591400637DE0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A9F2AC72041591400637DE0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A9F2ACB2041591400637DE0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -211,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
