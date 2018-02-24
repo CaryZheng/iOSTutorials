@@ -33,7 +33,10 @@ class ThreadViewController: ZViewController {
 //        testLock()
         
         // NSRecursiveLock
-        testNSRecursiveLock()
+//        testNSRecursiveLock()
+        
+        // NSConditionLock
+        testConditionLock()
     }
     
     @objc private func handlePrint() {
@@ -50,5 +53,12 @@ class ThreadViewController: ZViewController {
     private func testNSRecursiveLock() {
         let thread = RThread()
         thread.start()
+    }
+    
+    private func testConditionLock() {
+        let producerThread = ProducerThread()
+        let consumerThread = ConsumerThread()
+        producerThread.start()
+        consumerThread.start()
     }
 }
