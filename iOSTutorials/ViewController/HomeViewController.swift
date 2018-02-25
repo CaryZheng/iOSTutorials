@@ -13,7 +13,8 @@ class HomeViewController: UIViewController {
     private var mTableView: UITableView!
     
     private var mDatas = [
-        "Thread"
+        "Thread",
+        "Queue"
     ]
     
     override func viewDidLoad() {
@@ -53,6 +54,8 @@ extension HomeViewController: UITableViewDelegate {
         switch indexPath.row {
         case 0:
             vc = ThreadViewController()
+        case 1:
+            vc = QueueViewController()
         default:
             break
         }
