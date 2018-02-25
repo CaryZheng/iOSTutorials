@@ -49,13 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A379FDE2042AD6D00591E71 /* Queue */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Queue;
-			sourceTree = "<group>";
-		};
 		4A9F2AB62041591400637DE0 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +68,6 @@
 		4A9F2AC12041591400637DE0 /* iOSTutorials */ = {
 			isa = PBXGroup;
 			children = (
-				4A379FDE2042AD6D00591E71 /* Queue */,
 				4A9F2ADE2041666B00637DE0 /* Thread */,
 				4A9F2ADB20415C3700637DE0 /* Base */,
 				4A9F2AD6204159DA00637DE0 /* ViewController */,
