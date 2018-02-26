@@ -14,7 +14,8 @@ class HomeViewController: UIViewController {
     
     private var mDatas = [
         "Thread",
-        "Queue"
+        "Queue",
+        "Singleton"
     ]
     
     override func viewDidLoad() {
@@ -56,6 +57,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = ThreadViewController()
         case 1:
             vc = QueueViewController()
+        case 2:
+            vc = SingletonViewController()
         default:
             break
         }
