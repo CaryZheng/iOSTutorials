@@ -81,17 +81,144 @@ class QueueViewController: ZViewController {
         
         // 通过 屏障(barrier) 实现所有异步任务完成后再执行一个任务
         // 分发屏障不能作用与串行队列或者任何一种类型的全局并行队列，如果你想使用它，就必须自定义一个全新的并行队列。
-        let concurrentQueue2 = DispatchQueue(label: "com.zzb.concurrent", attributes: .concurrent)
-        concurrentQueue2.async {
-            DispatchQueue.concurrentPerform(iterations: 5) { (id: Int) in
-                sleep(1)
-                print("concurrentQueue2 execute 5 times, current id = \(id)")
+//        let concurrentQueue2 = DispatchQueue(label: "com.zzb.concurrent", attributes: .concurrent)
+//        concurrentQueue2.async {
+//            DispatchQueue.concurrentPerform(iterations: 5) { (id: Int) in
+//                sleep(1)
+//                print("concurrentQueue2 execute 5 times, current id = \(id)")
+//            }
+//        }
+//
+//        concurrentQueue2.async(flags: .barrier) {
+//            print("All 5 concurrent tasks completed")
+//        }
+        
+        // DispatchGroup
+        // 一旦所有任务完成以后，将会在队列中执行一个闭包，wait()方法用于执行阻塞等待
+//        let dispatchGroup = DispatchGroup()
+//
+//        for i in 0..<5 {
+//            globalQueue.async(group: dispatchGroup) {
+//                sleep(UInt32(i))
+//                print("Group async on globalQueue: \(i)")
+//            }
+//        }
+//
+//        print("Waiting for completion")
+//        dispatchGroup.notify(queue: globalQueue) {
+//            print("dispatchGroup notify")
+//        }
+//
+//        print("dispatchGroup begin wait")
+//        dispatchGroup.wait()
+//        print("dispatchGroup wait done")
+//
+//        // 手动在运行队列代码调用中进入和离开一个组
+//        for i in 0..<5 {
+//            dispatchGroup.enter()
+//
+//            sleep(UInt32(i))
+//            print("Group sync i = \(i)")
+//
+//            dispatchGroup.leave()
+//        }
+        
+        // DispatchWorkItem
+//        let workItem = DispatchWorkItem {
+//            print("workItem done")
+//        }
+////        workItem.perform()
+//
+//        workItem.notify(queue: DispatchQueue.main) {
+//            print("workItem notify")
+//        }
+//
+//        DispatchQueue.main.async(execute: workItem)
+        
+//        print("workItem waiting")
+//        workItem.wait()
+//        print("workItem cancel")
+//        workItem.cancel()
+        
+        // DispatchSemaphore
+//        testDispatchSemaphore()
+        
+        // DispatchPrecondition
+//        testDispatchPrecondition
+        
+        // DispatchSource
+//        testDispatchSource()
+        
+        // OperationQueue
+        testOperationQueue()
+    }
+    
+    private func testDispatchSemaphore() {
+        let dispatchSemaphore = DispatchSemaphore(value: 2)
+        
+        let globalQueue = DispatchQueue.global()
+        
+        globalQueue.sync {
+            DispatchQueue.concurrentPerform(iterations: 10) { (id: Int) in
+                _ = dispatchSemaphore.wait(timeout: DispatchTime.distantFuture)
+                sleep(3)
+                print("\(id) acquired semaphore")
+                dispatchSemaphore.signal()
+            }
+        }
+    }
+    
+    private func testDispatchPrecondition() {
+        dispatchPrecondition(condition: .notOnQueue(DispatchQueue.main))
+    }
+    
+    let dispatchSourceTimer = DispatchSource.makeTimerSource()
+    private func testDispatchSource() {
+        dispatchSourceTimer.setEventHandler {
+            print("dispatchSourceTimer event handle")
+        }
+        dispatchSourceTimer.schedule(deadline: .now() + .seconds(2))
+        
+        dispatchSourceTimer.activate()
+    }
+    
+    private func testOperationQueue() {
+        let queue = OperationQueue()
+        queue.name = "zzb"
+        queue.maxConcurrentOperationCount = 2
+        
+//        let mainQueue = OperationQueue.main   // 引用主线程中的队列
+        
+        queue.addOperation {
+            print("op1")
+        }
+        
+        queue.addOperation {
+            print("op2")
+        }
+        
+        // BlockOperation
+        let op3 = BlockOperation {
+            print("op3")
+        }
+        op3.queuePriority = .veryHigh
+        op3.completionBlock = {
+            print("op3 completionBlock")
+        }
+        
+        let op4 = BlockOperation {
+            print("op4")
+            OperationQueue.main.addOperation {
+                print("op4 main queue")
             }
         }
         
-        concurrentQueue2.async(flags: .barrier) {
-            print("All 5 concurrent tasks completed")
-        }
+        op4.addDependency(op3)  // op4依赖于op3，意味着op3将会先于op4执行
+        queue.addOperation(op4)
+        queue.addOperation(op3)
+        
+//        queue.cancelAllOperations()
+//        queue.isSuspended = true    // 在操作队列中停止新操作的执行（当前执行中的操作不会被影响）
     }
     
 }
