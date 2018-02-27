@@ -22,6 +22,7 @@
 		4ACE96972043ABD8007E507D /* SingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96962043ABD8007E507D /* SingletonViewController.swift */; };
 		4ACE969C2043AC3B007E507D /* MySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969B2043AC3B007E507D /* MySingleton.swift */; };
 		4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969D204507F7007E507D /* DataSaveViewController.swift */; };
+		4ACE96A220453D76007E507D /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96A020453D76007E507D /* MyModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4ACE96962043ABD8007E507D /* SingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonViewController.swift; sourceTree = "<group>"; };
 		4ACE969B2043AC3B007E507D /* MySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingleton.swift; sourceTree = "<group>"; };
 		4ACE969D204507F7007E507D /* DataSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSaveViewController.swift; sourceTree = "<group>"; };
+		4ACE96A120453D76007E507D /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		4A9F2AC12041591400637DE0 /* iOSTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				4ACE969F20453D5B007E507D /* CoreData */,
 				4ACE969A2043AC30007E507D /* Singleton */,
 				4A9F2ADE2041666B00637DE0 /* Thread */,
 				4A9F2ADB20415C3700637DE0 /* Base */,
@@ -124,6 +127,14 @@
 				4ACE969B2043AC3B007E507D /* MySingleton.swift */,
 			);
 			path = Singleton;
+			sourceTree = "<group>";
+		};
+		4ACE969F20453D5B007E507D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4ACE96A020453D76007E507D /* MyModel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */,
 				4A9F2ADA20415BEA00637DE0 /* HomeViewController.swift in Sources */,
 				4ACE969520417924007E507D /* ConditionThread.swift in Sources */,
+				4ACE96A220453D76007E507D /* MyModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +396,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4ACE96A020453D76007E507D /* MyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4ACE96A120453D76007E507D /* MyModel.xcdatamodel */,
+			);
+			currentVersion = 4ACE96A120453D76007E507D /* MyModel.xcdatamodel */;
+			path = MyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A9F2AB72041591400637DE0 /* Project object */;
 }

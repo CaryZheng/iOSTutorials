@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MyData: NSObject, NSCoding {
     var name: String
@@ -44,6 +45,9 @@ class DataSaveViewController: ZViewController {
         
         // archive
         testArchive()
+        
+        // CoreData
+        testCoreData()
     }
     
     private func testUserDefaults() {
@@ -97,6 +101,73 @@ class DataSaveViewController: ZViewController {
             
             let value22 = NSKeyedUnarchiver.unarchiveObject(withFile: testFilePath)
             print("value22 = \(String(describing: value22))")
+        }
+    }
+    
+    private func testCoreData() {
+        // save
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        guard let entity = NSEntityDescription.entity(forEntityName: "Users", in: context) else {
+            return
+        }
+        
+        let newUser = NSManagedObject(entity: entity, insertInto: context)
+        
+        newUser.setValue("zzb", forKey: "username")
+        newUser.setValue(18, forKey: "age")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Save data fail")
+        }
+        
+        // get
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        do {
+            let result = try context.fetch(request)
+            for data in result {
+                if let data = data as? NSManagedObject {
+                    let userName = data.value(forKey: "username") as? String
+                    let age = data.value(forKey: "age") as? Int
+                    
+                    print("userName = \(String(describing: userName)), age = \(String(describing: age))")
+                }
+            }
+        } catch {
+            print("Fetch fail")
+        }
+        
+        // remove
+        do {
+            let result = try context.fetch(request)
+            for data in result {
+                if let data = data as? NSManagedObject {
+                    context.delete(data)
+                }
+            }
+        } catch {
+            print("Fetch fail")
+        }
+        
+        // get
+        let request2 = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        do {
+            let result = try context.fetch(request2)
+            for data in result {
+                if let data = data as? NSManagedObject {
+                    let userName = data.value(forKey: "username") as? String
+                    let age = data.value(forKey: "age") as? Int
+                    
+                    print("userName = \(String(describing: userName)), age = \(String(describing: age))")
+                }
+            }
+        } catch {
+            print("Fetch fail")
         }
     }
     
