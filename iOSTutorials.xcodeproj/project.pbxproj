@@ -21,6 +21,7 @@
 		4ACE969520417924007E507D /* ConditionThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969420417924007E507D /* ConditionThread.swift */; };
 		4ACE96972043ABD8007E507D /* SingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96962043ABD8007E507D /* SingletonViewController.swift */; };
 		4ACE969C2043AC3B007E507D /* MySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969B2043AC3B007E507D /* MySingleton.swift */; };
+		4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969D204507F7007E507D /* DataSaveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4ACE969420417924007E507D /* ConditionThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionThread.swift; sourceTree = "<group>"; };
 		4ACE96962043ABD8007E507D /* SingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonViewController.swift; sourceTree = "<group>"; };
 		4ACE969B2043AC3B007E507D /* MySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingleton.swift; sourceTree = "<group>"; };
+		4ACE969D204507F7007E507D /* DataSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSaveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				4A9F2AD7204159F700637DE0 /* ThreadViewController.swift */,
 				4A379FDF2042AD8300591E71 /* QueueViewController.swift */,
 				4ACE96962043ABD8007E507D /* SingletonViewController.swift */,
+				4ACE969D204507F7007E507D /* DataSaveViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				4A379FE02042AD8300591E71 /* QueueViewController.swift in Sources */,
 				4ACE969C2043AC3B007E507D /* MySingleton.swift in Sources */,
 				4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */,
+				4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */,
 				4ACE96972043ABD8007E507D /* SingletonViewController.swift in Sources */,
 				4ACE969120416DFC007E507D /* RThread.swift in Sources */,
 				4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */,

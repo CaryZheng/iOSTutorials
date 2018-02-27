@@ -15,7 +15,8 @@ class HomeViewController: UIViewController {
     private var mDatas = [
         "Thread",
         "Queue",
-        "Singleton"
+        "Singleton",
+        "数据存储"
     ]
     
     override func viewDidLoad() {
@@ -59,6 +60,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = QueueViewController()
         case 2:
             vc = SingletonViewController()
+        case 3:
+            vc = DataSaveViewController()
         default:
             break
         }
