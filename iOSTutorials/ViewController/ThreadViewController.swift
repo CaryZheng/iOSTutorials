@@ -28,17 +28,17 @@ class ThreadViewController: ZViewController {
 //
 //        myThread.stackSize = 1024 * 16
 //        myThread.start()
-//
-//        // NSLock
+
+        // NSLock
 //        testLock()
-        
+
         // NSRecursiveLock
 //        testNSRecursiveLock()
-        
-        // NSConditionLock
+//
+//        // NSConditionLock
 //        testConditionLock()
-        
-        // NSCondition
+//
+//        // NSCondition
         testCondition()
     }
     

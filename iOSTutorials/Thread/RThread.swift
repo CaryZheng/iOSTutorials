@@ -8,6 +8,7 @@
 
 import Foundation
 
+// 递归锁
 let rLock = NSRecursiveLock()
 
 class RThread: Thread {
