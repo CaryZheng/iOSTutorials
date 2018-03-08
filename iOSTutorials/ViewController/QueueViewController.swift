@@ -13,15 +13,15 @@ class QueueViewController: ZViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        // 串行队列
+        // 串行队列
 //        let serialQueue = DispatchQueue(label: "com.zzb.serial")
 //        // 并行队列
 //        let consurrentQueue = DispatchQueue(label: "com.zzb.concurrent", attributes: .concurrent)
 //
 //        // 主队列
 //        let mainQueue = DispatchQueue.main
-        // 全局队列
-//        let globalQueue = DispatchQueue.global()
+//        // 全局队列
+        let globalQueue = DispatchQueue.global()
 //
 //        // 队列优先级从高到低(QoSClass)
 //        // userInteractive
@@ -57,26 +57,26 @@ class QueueViewController: ZViewController {
 //        globalQueue.asyncAfter(deadline: .now() + .seconds(2)) {
 //            print("Execute after 2s")
 //        }
-        
-        // 同时执行一个相同的闭包
+//
+//        // 同时执行一个相同的闭包
 //        globalQueue.sync {
 //            DispatchQueue.concurrentPerform(iterations: 5) {
 //                print("\($0) times")
 //            }
 //        }
-        
-        // 手动激活队列任务
-        // 注意：setTarget(queue:) 方法可以用来配置非活跃队列的优先级（使用它来设置活跃队列将导致崩溃），调用此方法，把队列的优先级设置为作为参数传入队列的优先级。
+//
+//        // 手动激活队列任务
+//        // 注意：setTarget(queue:) 方法可以用来配置非活跃队列的优先级（使用它来设置活跃队列将导致崩溃），调用此方法，把队列的优先级设置为作为参数传入队列的优先级。
 //        let inactiveQueue = DispatchQueue(label: "com.zzb.inactiveQueue", attributes: [.concurrent, .initiallyInactive])
 //        inactiveQueue.async {
 //            print("inactiveQueue execute")
 //        }
 //        print("inactiveQueue not start")
 //        inactiveQueue.activate()
-        
-        // 挂起
+//
+//        // 挂起
 //        inactiveQueue.suspend()
-        // 恢复
+//        // 恢复
 //        inactiveQueue.resume()
         
         // 通过 屏障(barrier) 实现所有异步任务完成后再执行一个任务
@@ -96,7 +96,7 @@ class QueueViewController: ZViewController {
         // DispatchGroup
         // 一旦所有任务完成以后，将会在队列中执行一个闭包，wait()方法用于执行阻塞等待
 //        let dispatchGroup = DispatchGroup()
-//
+
 //        for i in 0..<5 {
 //            globalQueue.async(group: dispatchGroup) {
 //                sleep(UInt32(i))
@@ -112,8 +112,8 @@ class QueueViewController: ZViewController {
 //        print("dispatchGroup begin wait")
 //        dispatchGroup.wait()
 //        print("dispatchGroup wait done")
-//
-//        // 手动在运行队列代码调用中进入和离开一个组
+
+        // 手动在运行队列代码调用中进入和离开一个组
 //        for i in 0..<5 {
 //            dispatchGroup.enter()
 //
@@ -144,7 +144,7 @@ class QueueViewController: ZViewController {
 //        testDispatchSemaphore()
         
         // DispatchPrecondition
-//        testDispatchPrecondition
+//        testDispatchPrecondition()
         
         // DispatchSource
 //        testDispatchSource()
