@@ -23,6 +23,7 @@
 		4ACE969C2043AC3B007E507D /* MySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969B2043AC3B007E507D /* MySingleton.swift */; };
 		4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969D204507F7007E507D /* DataSaveViewController.swift */; };
 		4ACE96A220453D76007E507D /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96A020453D76007E507D /* MyModel.xcdatamodeld */; };
+		4ACE972120513BE2007E507D /* CodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE972020513BE2007E507D /* CodableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4ACE969B2043AC3B007E507D /* MySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingleton.swift; sourceTree = "<group>"; };
 		4ACE969D204507F7007E507D /* DataSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSaveViewController.swift; sourceTree = "<group>"; };
 		4ACE96A120453D76007E507D /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
+		4ACE972020513BE2007E507D /* CodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				4A379FDF2042AD8300591E71 /* QueueViewController.swift */,
 				4ACE96962043ABD8007E507D /* SingletonViewController.swift */,
 				4ACE969D204507F7007E507D /* DataSaveViewController.swift */,
+				4ACE972020513BE2007E507D /* CodableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A379FE02042AD8300591E71 /* QueueViewController.swift in Sources */,
+				4ACE972120513BE2007E507D /* CodableViewController.swift in Sources */,
 				4ACE969C2043AC3B007E507D /* MySingleton.swift in Sources */,
 				4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */,
 				4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */,

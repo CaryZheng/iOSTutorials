@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
         "Thread",
         "Queue",
         "Singleton",
-        "数据存储"
+        "数据存储",
+        "Codable"
     ]
     
     override func viewDidLoad() {
@@ -62,6 +63,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = SingletonViewController()
         case 3:
             vc = DataSaveViewController()
+        case 4:
+            vc = CodableViewController()
         default:
             break
         }
