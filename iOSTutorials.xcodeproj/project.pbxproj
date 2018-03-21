@@ -16,6 +16,7 @@
 		4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2ADC20415C4400637DE0 /* ZViewController.swift */; };
 		4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2ADF2041667400637DE0 /* MyThread.swift */; };
 		4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AE120416BAF00637DE0 /* LThread.swift */; };
+		4AB2212D20624A9300450458 /* PointerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2212C20624A9300450458 /* PointerViewController.swift */; };
 		4ACE969120416DFC007E507D /* RThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969020416DFC007E507D /* RThread.swift */; };
 		4ACE96932041731C007E507D /* ConditionLockThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96922041731C007E507D /* ConditionLockThread.swift */; };
 		4ACE969520417924007E507D /* ConditionThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969420417924007E507D /* ConditionThread.swift */; };
@@ -38,6 +39,7 @@
 		4A9F2ADC20415C4400637DE0 /* ZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZViewController.swift; sourceTree = "<group>"; };
 		4A9F2ADF2041667400637DE0 /* MyThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyThread.swift; sourceTree = "<group>"; };
 		4A9F2AE120416BAF00637DE0 /* LThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LThread.swift; sourceTree = "<group>"; };
+		4AB2212C20624A9300450458 /* PointerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerViewController.swift; sourceTree = "<group>"; };
 		4ACE969020416DFC007E507D /* RThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RThread.swift; sourceTree = "<group>"; };
 		4ACE96922041731C007E507D /* ConditionLockThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionLockThread.swift; sourceTree = "<group>"; };
 		4ACE969420417924007E507D /* ConditionThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionThread.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				4ACE96962043ABD8007E507D /* SingletonViewController.swift */,
 				4ACE969D204507F7007E507D /* DataSaveViewController.swift */,
 				4ACE972020513BE2007E507D /* CodableViewController.swift */,
+				4AB2212C20624A9300450458 /* PointerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */,
 				4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */,
 				4ACE96972043ABD8007E507D /* SingletonViewController.swift in Sources */,
+				4AB2212D20624A9300450458 /* PointerViewController.swift in Sources */,
 				4ACE969120416DFC007E507D /* RThread.swift in Sources */,
 				4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */,
 				4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */,
