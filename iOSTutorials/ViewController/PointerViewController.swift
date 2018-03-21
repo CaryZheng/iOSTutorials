@@ -51,13 +51,13 @@ class PointerViewController: ZViewController {
         var testArrayInt = [10, 20, 30]
         handleArrayInt(ptr: &testArrayInt)
         print("testArrayInt = \(testArrayInt)")
-        
+
         // 指向数组(String)的指针
         print("")
         var testArrayStr = ["a", "y", "f"]
         handleArrayStr(ptr: &testArrayStr)
         print("testArrayStr = \(testArrayStr)")
-        
+
         // 自定义class类型指针
         print("")
         var userPtr: UnsafeMutablePointer<TestUser>!
@@ -84,25 +84,25 @@ class PointerViewController: ZViewController {
         print("2: handleArrayInt ptr[1] = \(ptr[1])")
         
         let buffer = UnsafeBufferPointer(start: ptr, count: 3)
+        // 转化为Buffer类型，进而遍历数组
         buffer.forEach {
             print("handleArrayInt print array element = \($0)")
         }
     }
     
     func increaseValue(ptr: UnsafeMutablePointer<Int>) {
-        ptr.pointee += 1
+        ptr.pointee += 1    // mutable类型: 可修改对应的value
     }
     
     func printValueInt(ptr: UnsafePointer<Int>) {
-        print("ptr = \(ptr.pointee)")
+        print("ptr value = \(ptr.pointee)")   // 非mutable类型: 只读，不可修改
     }
     
     func convertRawPointer(ptr: UnsafePointer<Int>) {
-        let rawPtr = UnsafeRawPointer(ptr)
+        let rawPtr = UnsafeRawPointer(ptr)  // UnsafePointer 转 UnsafeRawPointer
         print("convertRawPointer rawPtr = \(rawPtr)")
-        let ptrInt = rawPtr.assumingMemoryBound(to: Int.self)
+        let ptrInt = rawPtr.assumingMemoryBound(to: Int.self) // UnsafeRawPointer 转 UnsafePointer
         print("convertRawPointer ptrInt = \(ptrInt), value = \(ptrInt.pointee)")
-        
     }
     
 }
