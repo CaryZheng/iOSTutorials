@@ -18,7 +18,8 @@ class HomeViewController: UIViewController {
         "Singleton",
         "数据存储",
         "Codable",
-        "Pointer"
+        "Pointer",
+        "WebSocket"
     ]
     
     override func viewDidLoad() {
@@ -68,6 +69,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = CodableViewController()
         case 5:
             vc = PointerViewController()
+        case 6:
+            vc = WebSocketViewController()
         default:
             break
         }
