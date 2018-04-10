@@ -65,9 +65,9 @@ class PointerViewController: ZViewController {
         print("allocate userPtr = \(userPtr)")
         userPtr.initialize(to: TestUser(name: "Cary1", age: 18))
         print("initialize userPtr = \(userPtr), value name = \(userPtr.pointee.name), age = \(userPtr.pointee.age)")
-        userPtr.deinitialize()
+        userPtr.deinitialize(count: 1)
         print("deinitialize userPtr = \(userPtr)")
-        userPtr.deallocate(capacity: 1)
+        userPtr.deallocate()
         userPtr = nil
         print("deallocate userPtr = \(userPtr)")
     }

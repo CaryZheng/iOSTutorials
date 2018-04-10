@@ -21,7 +21,7 @@ class QueueViewController: ZViewController {
 //        // 主队列
 //        let mainQueue = DispatchQueue.main
 //        // 全局队列
-        let globalQueue = DispatchQueue.global()
+//        let globalQueue = DispatchQueue.global()
 //
 //        // 队列优先级从高到低(QoSClass)
 //        // userInteractive
