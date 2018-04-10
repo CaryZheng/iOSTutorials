@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'iOSTutorials' do
 	pod 'Starscream'
+    pod 'Socket.IO-Client-Swift', '~> 13.1.0'
 end

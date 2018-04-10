@@ -33,22 +33,27 @@ class WebSocketViewController: ZViewController {
 
 extension WebSocketViewController: WebSocketDelegate {
     
+    /// 连接成功后的回调
     func websocketDidConnect(socket: WebSocketClient) {
         print("websocketDidConnect")
     }
     
+    /// 断开连接后的回调
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         print("websocketDidDisconnect, error = \(String(describing: error))")
     }
     
+    /// 接收到消息后的回调(String)
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         print("websocketDidReceiveMessage, text = \(text)")
         
         if text.contains("Hello Client") {
+            // 发送消息
             mWebSocket.write(string: "Send msg from iOS Client by Cary")
         }
     }
     
+    /// 接收到消息后的回调(Data)
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         print("websocketDidReceiveData")
     }

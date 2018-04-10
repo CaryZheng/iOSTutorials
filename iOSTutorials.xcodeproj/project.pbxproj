@@ -10,6 +10,7 @@
 		0155B24201B27BBE77E6EAA1 /* Pods_iOSTutorials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D9BABFAF5F1B40B2BC8E4 /* Pods_iOSTutorials.framework */; };
 		4A379FE02042AD8300591E71 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A379FDF2042AD8300591E71 /* QueueViewController.swift */; };
 		4A489753207C93850060A900 /* WebSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489752207C93850060A900 /* WebSocketViewController.swift */; };
+		4A489757207CAF7C0060A900 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489756207CAF7C0060A900 /* SocketViewController.swift */; };
 		4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC22041591400637DE0 /* AppDelegate.swift */; };
 		4A9F2ACA2041591400637DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC92041591400637DE0 /* Assets.xcassets */; };
 		4A9F2ACD2041591400637DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2ACB2041591400637DE0 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 		2955C79A8E44DCAA10E5421D /* Pods-iOSTutorials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTutorials.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTutorials/Pods-iOSTutorials.release.xcconfig"; sourceTree = "<group>"; };
 		4A379FDF2042AD8300591E71 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
 		4A489752207C93850060A900 /* WebSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewController.swift; sourceTree = "<group>"; };
+		4A489756207CAF7C0060A900 /* SocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
 		4A9F2ABF2041591400637DE0 /* iOSTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9F2AC22041591400637DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A9F2AC92041591400637DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				4ACE972020513BE2007E507D /* CodableViewController.swift */,
 				4AB2212C20624A9300450458 /* PointerViewController.swift */,
 				4A489752207C93850060A900 /* WebSocketViewController.swift */,
+				4A489756207CAF7C0060A900 /* SocketViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -246,10 +249,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOSTutorials/Pods-iOSTutorials-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +294,7 @@
 				4ACE969E204507F7007E507D /* DataSaveViewController.swift in Sources */,
 				4ACE96972043ABD8007E507D /* SingletonViewController.swift in Sources */,
 				4AB2212D20624A9300450458 /* PointerViewController.swift in Sources */,
+				4A489757207CAF7C0060A900 /* SocketViewController.swift in Sources */,
 				4ACE969120416DFC007E507D /* RThread.swift in Sources */,
 				4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */,
 				4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */,
