@@ -20,7 +20,8 @@ class HomeViewController: UIViewController {
         "Codable",
         "Pointer",
         "WebSocket",
-        "Socket"
+        "Socket",
+        "Animation"
     ]
     
     override func viewDidLoad() {
@@ -74,6 +75,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = WebSocketViewController()
         case 7:
             vc = SocketViewController()
+        case 8:
+            vc = AnimationViewController()
         default:
             break
         }
