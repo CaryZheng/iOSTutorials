@@ -1,5 +1,5 @@
 //
-//  AnimationViewController.swift
+//  UIViewAnimationViewController.swift
 //  iOSTutorials
 //
 //  Created by CaryZheng on 2018/4/11.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimationViewController: ZViewController {
+class UIViewAnimationViewController: ZViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class AnimationViewController: ZViewController {
     }
     
     @objc private func onButtonClicked() {
-        testSpringAnimation()
+        testUIViewAnimation1()
     }
     
     // UIView animate简单用法

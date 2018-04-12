@@ -4,6 +4,104 @@
    <FileRef
       location = "group:iOSTutorials.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:iOSTutorials"
+      name = "iOSTutorials">
+      <Group
+         location = "group:iOSTutorials/CoreData"
+         name = "CoreData">
+         <Group
+            location = "group:iOSTutorials/CoreData/MyModel.xcdatamodeld"
+            name = "MyModel.xcdatamodeld">
+            <FileRef
+               location = "group:iOSTutorials/CoreData/MyModel.xcdatamodeld/MyModel.xcdatamodel">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:iOSTutorials/Singleton"
+         name = "Singleton">
+         <FileRef
+            location = "group:iOSTutorials/Singleton/MySingleton.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:iOSTutorials/Thread"
+         name = "Thread">
+         <FileRef
+            location = "group:iOSTutorials/Thread/MyThread.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/Thread/LThread.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/Thread/RThread.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/Thread/ConditionLockThread.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/Thread/ConditionThread.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:iOSTutorials/Base"
+         name = "Base">
+         <FileRef
+            location = "group:iOSTutorials/Base/ZViewController.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:iOSTutorials/ViewController"
+         name = "ViewController">
+         <FileRef
+            location = "group:iOSTutorials/ViewController/HomeViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/ThreadViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/QueueViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/SingletonViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/DataSaveViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/CodableViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/PointerViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/WebSocketViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/SocketViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:iOSTutorials/ViewController/AnimationViewController.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:iOSTutorials/AppDelegate.swift">
+      </FileRef>
+      <FileRef
+         location = "group:iOSTutorials/Assets.xcassets">
+      </FileRef>
+      <Group
+         location = "group:iOSTutorials"
+         name = "LaunchScreen.storyboard">
+         <FileRef
+            location = "group:iOSTutorials/Base.lproj/LaunchScreen.storyboard">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:iOSTutorials/Info.plist">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

@@ -76,7 +76,7 @@ extension HomeViewController: UITableViewDelegate {
         case 7:
             vc = SocketViewController()
         case 8:
-            vc = AnimationViewController()
+            vc = UIViewAnimationViewController()
         default:
             break
         }

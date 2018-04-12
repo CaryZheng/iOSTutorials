@@ -11,7 +11,7 @@
 		4A379FE02042AD8300591E71 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A379FDF2042AD8300591E71 /* QueueViewController.swift */; };
 		4A489753207C93850060A900 /* WebSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489752207C93850060A900 /* WebSocketViewController.swift */; };
 		4A489757207CAF7C0060A900 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489756207CAF7C0060A900 /* SocketViewController.swift */; };
-		4A489D95207DFE090060A900 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489D94207DFE090060A900 /* AnimationViewController.swift */; };
+		4A489D95207DFE090060A900 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489D94207DFE090060A900 /* UIViewAnimationViewController.swift */; };
 		4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC22041591400637DE0 /* AppDelegate.swift */; };
 		4A9F2ACA2041591400637DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC92041591400637DE0 /* Assets.xcassets */; };
 		4A9F2ACD2041591400637DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2ACB2041591400637DE0 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		4A379FDF2042AD8300591E71 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
 		4A489752207C93850060A900 /* WebSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewController.swift; sourceTree = "<group>"; };
 		4A489756207CAF7C0060A900 /* SocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
-		4A489D94207DFE090060A900 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		4A489D94207DFE090060A900 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		4A9F2ABF2041591400637DE0 /* iOSTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9F2AC22041591400637DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A9F2AC92041591400637DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 				4AB2212C20624A9300450458 /* PointerViewController.swift */,
 				4A489752207C93850060A900 /* WebSocketViewController.swift */,
 				4A489756207CAF7C0060A900 /* SocketViewController.swift */,
-				4A489D94207DFE090060A900 /* AnimationViewController.swift */,
+				4A489D94207DFE090060A900 /* UIViewAnimationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */,
 				4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */,
 				4ACE96932041731C007E507D /* ConditionLockThread.swift in Sources */,
-				4A489D95207DFE090060A900 /* AnimationViewController.swift in Sources */,
+				4A489D95207DFE090060A900 /* UIViewAnimationViewController.swift in Sources */,
 				4A489753207C93850060A900 /* WebSocketViewController.swift in Sources */,
 				4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */,
 				4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */,
