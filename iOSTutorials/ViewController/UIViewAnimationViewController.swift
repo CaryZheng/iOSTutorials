@@ -32,14 +32,21 @@ class UIViewAnimationViewController: ZViewController {
     // UIView animate简单用法
     private func testUIViewAnimation1() {
         let view = UIView(frame: CGRect(x: 20, y: 100, width: 100, height: 100))
-        view.backgroundColor = UIColor.red
         
         self.view.addSubview(view)
         
+        // 初始颜色为红色
+        view.backgroundColor = UIColor.red
+        
+        // 初始透明度为 0
         view.alpha = 0
         
+        // withDuration: 动画持续时间
         UIView.animate(withDuration: 1.0) {
+            // 最终颜色为黄色
             view.backgroundColor = UIColor.yellow
+            
+            // 最终透明度为 1.0
             view.alpha = 1.0
         }
     }
