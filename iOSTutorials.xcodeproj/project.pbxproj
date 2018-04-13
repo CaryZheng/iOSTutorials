@@ -12,6 +12,7 @@
 		4A489753207C93850060A900 /* WebSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489752207C93850060A900 /* WebSocketViewController.swift */; };
 		4A489757207CAF7C0060A900 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489756207CAF7C0060A900 /* SocketViewController.swift */; };
 		4A489D95207DFE090060A900 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489D94207DFE090060A900 /* UIViewAnimationViewController.swift */; };
+		4A48A3BF208093450060A900 /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A3BE208093450060A900 /* CoreAnimationViewController.swift */; };
 		4A9F2AC32041591400637DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC22041591400637DE0 /* AppDelegate.swift */; };
 		4A9F2ACA2041591400637DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2AC92041591400637DE0 /* Assets.xcassets */; };
 		4A9F2ACD2041591400637DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2ACB2041591400637DE0 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 		4A489752207C93850060A900 /* WebSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewController.swift; sourceTree = "<group>"; };
 		4A489756207CAF7C0060A900 /* SocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
 		4A489D94207DFE090060A900 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
+		4A48A3BE208093450060A900 /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationViewController.swift; sourceTree = "<group>"; };
 		4A9F2ABF2041591400637DE0 /* iOSTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9F2AC22041591400637DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A9F2AC92041591400637DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				4A489752207C93850060A900 /* WebSocketViewController.swift */,
 				4A489756207CAF7C0060A900 /* SocketViewController.swift */,
 				4A489D94207DFE090060A900 /* UIViewAnimationViewController.swift */,
+				4A48A3BE208093450060A900 /* CoreAnimationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				4ACE96972043ABD8007E507D /* SingletonViewController.swift in Sources */,
 				4AB2212D20624A9300450458 /* PointerViewController.swift in Sources */,
 				4A489757207CAF7C0060A900 /* SocketViewController.swift in Sources */,
+				4A48A3BF208093450060A900 /* CoreAnimationViewController.swift in Sources */,
 				4ACE969120416DFC007E507D /* RThread.swift in Sources */,
 				4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */,
 				4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */,
