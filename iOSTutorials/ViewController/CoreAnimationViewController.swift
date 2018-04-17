@@ -8,6 +8,20 @@
 
 import UIKit
 
+class MyView: UIView {
+    
+    override func draw(_ rect: CGRect) {
+        let path = UIBezierPath()
+        path.addArc(withCenter: CGPoint(x: 150.0, y: 150.0), radius: 50.0, startAngle: 0, endAngle: CGFloat(Double.pi * 2.0), clockwise: true)
+        path.lineWidth = 5
+        UIColor.blue.setStroke()
+        UIColor.red.setFill()
+        path.stroke()
+        path.fill()
+    }
+    
+}
+
 class CoreAnimationViewController: ZViewController {
     
     override func viewDidLoad() {
@@ -26,7 +40,7 @@ class CoreAnimationViewController: ZViewController {
     }
     
     @objc private func onButtonClicked() {
-        testCustomLayer()
+        testMove()
     }
     
     // layer简单用法
@@ -81,6 +95,104 @@ class CoreAnimationViewController: ZViewController {
         layer.display()
         
         view.layer.addSublayer(layer)
+    }
+    
+    // 自定义View
+    private func testCustomView() {
+        let view = MyView(frame: CGRect(x: 20, y: 100, width: 300, height: 300))
+        self.view.addSubview(view)
+    }
+    
+    private func testKeyFrameAnimation() {
+        let view = UIView(frame: CGRect(x: 20, y: 100, width: 100, height: 100))
+        view.backgroundColor = UIColor.red
+        self.view.addSubview(view)
+        
+        let keyFrameAnimate = CAKeyframeAnimation(keyPath: "position")
+        
+        let path = UIBezierPath()
+        
+        // center: 中心点
+        // radius: 半径
+        // startAngle: 起始角度
+        // endAngle: 终止角度
+        // clockwise: 是否顺时针方向
+        path.addArc(withCenter: CGPoint(x: 200, y: 200), radius: 100, startAngle: 0, endAngle: CGFloat(Double.pi*2.0), clockwise: true)
+        
+        keyFrameAnimate.path = path.cgPath
+        keyFrameAnimate.duration = 3
+        
+        keyFrameAnimate.beginTime = CACurrentMediaTime() + 3    // 动画延迟3秒执行
+        
+        // fillMode: 决定非active时间段的行为
+        // kCAFillModeForwards: 动画开始后Layer才进入动画开始位置，动画结束后保持动画最后的状态
+        // kCAFillModeBackwards: 动画开始前Layer已经进入动画开始位置，动画结束后恢复到之前的状态
+        // kCAFillModeRemoved: 动画开始后Layer才进入动画开始位置，动画结束后Layer恢复到之前的状态
+        // kCAFillModeBoth: 动画开始前Layer已经进入动画开始位置，动画结束后保持动画最后的状态
+        keyFrameAnimate.fillMode = kCAFillModeForwards
+        keyFrameAnimate.delegate = self
+        keyFrameAnimate.isRemovedOnCompletion = false
+        keyFrameAnimate.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        view.layer.add(keyFrameAnimate, forKey: "zzb")
+    }
+    
+    // 3D旋转
+    private func testTransform3DRotate() {
+        let view = UIView(frame: CGRect(x: 20, y: 100, width: 100, height: 100))
+        view.backgroundColor = UIColor.red
+        self.view.addSubview(view)
+        
+        let animate = CABasicAnimation(keyPath: "transform")
+        animate.toValue = NSValue(caTransform3D: CATransform3DMakeRotation(CGFloat(Double.pi), 0, 1, 0))
+        animate.duration = 3
+        animate.isRemovedOnCompletion = false
+        animate.fillMode = kCAFillModeForwards
+        
+        view.layer.add(animate, forKey: "zzb")
+    }
+    
+    // 放大
+    private func testScale() {
+        let view = UIView(frame: CGRect(x: 200, y: 200, width: 100, height: 100))
+        view.backgroundColor = UIColor.red
+        self.view.addSubview(view)
+        
+        let animate = CABasicAnimation(keyPath: "bounds")
+        animate.toValue = NSValue(cgRect: CGRect(x: 0, y: 0, width: 120, height: 120))
+        animate.duration = 3
+        animate.isRemovedOnCompletion = false
+        animate.fillMode = kCAFillModeForwards
+        
+        view.layer.add(animate, forKey: "zzb")
+    }
+    
+    // 平移
+    private func testMove() {
+        let view = UIView(frame: CGRect(x: 200, y: 200, width: 100, height: 100))
+        view.backgroundColor = UIColor.red
+        self.view.addSubview(view)
+        
+        let animate = CABasicAnimation(keyPath: "position")
+        animate.fromValue = NSValue(cgPoint: CGPoint(x: 100, y: 300))
+        animate.toValue = NSValue(cgPoint: CGPoint(x: 200, y: 200))
+        animate.duration = 3
+        animate.isRemovedOnCompletion = false
+        animate.fillMode = kCAFillModeForwards
+        
+        view.layer.add(animate, forKey: "zzb")
+    }
+    
+}
+
+extension CoreAnimationViewController: CAAnimationDelegate {
+    
+    func animationDidStart(_ anim: CAAnimation) {
+        print("CoreAnimationViewController animationDidStart")
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        print("CoreAnimationViewController animationDidStop")
     }
     
 }
