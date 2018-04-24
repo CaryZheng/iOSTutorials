@@ -22,7 +22,8 @@ class HomeViewController: UIViewController {
         "WebSocket",
         "Socket",
         "UIView Animation",
-        "Core Animation"
+        "Core Animation",
+        "Swizzle"
     ]
     
     override func viewDidLoad() {
@@ -80,6 +81,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = UIViewAnimationViewController()
         case 9:
             vc = CoreAnimationViewController()
+        case 10:
+            vc = SwizzleViewController()
         default:
             break
         }
