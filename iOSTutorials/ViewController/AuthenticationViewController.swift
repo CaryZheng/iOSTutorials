@@ -24,19 +24,24 @@ class AuthenticationViewController: ZViewController {
         let localizedReason = "Test auth"
         
         var error: NSError? = nil
+        // 判断是否支持指纹/密码验证识别
         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
             print("Support authentication")
             
+            // 请求验证
             context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: localizedReason, reply: {
                 (success, error) in
                 
                 if success {
                     if nil != context.evaluatedPolicyDomainState {
+                        // 指纹验证成功
                         print("TouchID success")
                     } else {
+                        // 密码验证成功
                         print("Input password success")
                     }
                 } else {
+                    // 验证失败
                     print("Error = \(String(describing: error))")
                     
                     if let error = error as? LAError {
@@ -67,6 +72,7 @@ class AuthenticationViewController: ZViewController {
             })
             
         } else {
+            // 不支持指纹/密码验证识别
             print("Do not support authentication")
         }
     }
