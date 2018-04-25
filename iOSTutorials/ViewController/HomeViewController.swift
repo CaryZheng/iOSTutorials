@@ -23,7 +23,8 @@ class HomeViewController: UIViewController {
         "Socket",
         "UIView Animation",
         "Core Animation",
-        "Swizzle"
+        "Swizzle",
+        "Authentication"
     ]
     
     override func viewDidLoad() {
@@ -83,6 +84,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = CoreAnimationViewController()
         case 10:
             vc = SwizzleViewController()
+        case 11:
+            vc = AuthenticationViewController()
         default:
             break
         }
