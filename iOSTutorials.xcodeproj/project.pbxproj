@@ -24,6 +24,9 @@
 		4A9F2AE02041667400637DE0 /* MyThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2ADF2041667400637DE0 /* MyThread.swift */; };
 		4A9F2AE220416BAF00637DE0 /* LThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F2AE120416BAF00637DE0 /* LThread.swift */; };
 		4AB2212D20624A9300450458 /* PointerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2212C20624A9300450458 /* PointerViewController.swift */; };
+		4ACBEFEA20946842005DC41E /* CoreMLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBEFE920946842005DC41E /* CoreMLViewController.swift */; };
+		4ACBEFED209468DB005DC41E /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBEFEC209468DB005DC41E /* MNISTClassifier.mlmodel */; };
+		4ACBEFF020946EDD005DC41E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBEFEF20946EDD005DC41E /* Utilities.swift */; };
 		4ACE969120416DFC007E507D /* RThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969020416DFC007E507D /* RThread.swift */; };
 		4ACE96932041731C007E507D /* ConditionLockThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE96922041731C007E507D /* ConditionLockThread.swift */; };
 		4ACE969520417924007E507D /* ConditionThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE969420417924007E507D /* ConditionThread.swift */; };
@@ -55,6 +58,9 @@
 		4A9F2ADF2041667400637DE0 /* MyThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyThread.swift; sourceTree = "<group>"; };
 		4A9F2AE120416BAF00637DE0 /* LThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LThread.swift; sourceTree = "<group>"; };
 		4AB2212C20624A9300450458 /* PointerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerViewController.swift; sourceTree = "<group>"; };
+		4ACBEFE920946842005DC41E /* CoreMLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLViewController.swift; sourceTree = "<group>"; };
+		4ACBEFEC209468DB005DC41E /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTClassifier.mlmodel; sourceTree = "<group>"; };
+		4ACBEFEF20946EDD005DC41E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4ACE969020416DFC007E507D /* RThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RThread.swift; sourceTree = "<group>"; };
 		4ACE96922041731C007E507D /* ConditionLockThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionLockThread.swift; sourceTree = "<group>"; };
 		4ACE969420417924007E507D /* ConditionThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionThread.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 		4A9F2AC12041591400637DE0 /* iOSTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				4ACBEFEE20946EDD005DC41E /* Utils */,
+				4ACBEFEB209468DB005DC41E /* Resources */,
 				4ACE969F20453D5B007E507D /* CoreData */,
 				4ACE969A2043AC30007E507D /* Singleton */,
 				4A9F2ADE2041666B00637DE0 /* Thread */,
@@ -137,6 +145,7 @@
 				4A48A3BE208093450060A900 /* CoreAnimationViewController.swift */,
 				4A608578208EE51700761894 /* SwizzleViewController.swift */,
 				4A60857A2090259400761894 /* AuthenticationViewController.swift */,
+				4ACBEFE920946842005DC41E /* CoreMLViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -159,6 +168,22 @@
 				4ACE969420417924007E507D /* ConditionThread.swift */,
 			);
 			path = Thread;
+			sourceTree = "<group>";
+		};
+		4ACBEFEB209468DB005DC41E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4ACBEFEC209468DB005DC41E /* MNISTClassifier.mlmodel */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4ACBEFEE20946EDD005DC41E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4ACBEFEF20946EDD005DC41E /* Utilities.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		4ACE969A2043AC30007E507D /* Singleton */ = {
@@ -314,6 +339,7 @@
 				4ACE96932041731C007E507D /* ConditionLockThread.swift in Sources */,
 				4A489D95207DFE090060A900 /* UIViewAnimationViewController.swift in Sources */,
 				4A489753207C93850060A900 /* WebSocketViewController.swift in Sources */,
+				4ACBEFEA20946842005DC41E /* CoreMLViewController.swift in Sources */,
 				4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */,
 				4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */,
 				4A60857B2090259400761894 /* AuthenticationViewController.swift in Sources */,
@@ -321,6 +347,8 @@
 				4ACE969520417924007E507D /* ConditionThread.swift in Sources */,
 				4ACE96A220453D76007E507D /* MyModel.xcdatamodeld in Sources */,
 				4A608579208EE51800761894 /* SwizzleViewController.swift in Sources */,
+				4ACBEFF020946EDD005DC41E /* Utilities.swift in Sources */,
+				4ACBEFED209468DB005DC41E /* MNISTClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
