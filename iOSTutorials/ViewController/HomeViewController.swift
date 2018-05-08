@@ -25,7 +25,8 @@ class HomeViewController: UIViewController {
         "Core Animation",
         "Swizzle",
         "Authentication",
-        "CoreML"
+        "CoreML",
+        "Video"
     ]
     
     override func viewDidLoad() {
@@ -89,6 +90,8 @@ extension HomeViewController: UITableViewDelegate {
             vc = AuthenticationViewController()
         case 12:
             vc = CoreMLViewController()
+        case 13:
+            vc = VideoViewController()
         default:
             break
         }

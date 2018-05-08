@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0155B24201B27BBE77E6EAA1 /* Pods_iOSTutorials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D9BABFAF5F1B40B2BC8E4 /* Pods_iOSTutorials.framework */; };
+		4A08BADA20A18E57002D9C76 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08BAD920A18E57002D9C76 /* VideoViewController.swift */; };
 		4A379FE02042AD8300591E71 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A379FDF2042AD8300591E71 /* QueueViewController.swift */; };
 		4A489753207C93850060A900 /* WebSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489752207C93850060A900 /* WebSocketViewController.swift */; };
 		4A489757207CAF7C0060A900 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A489756207CAF7C0060A900 /* SocketViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1C4D9BABFAF5F1B40B2BC8E4 /* Pods_iOSTutorials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTutorials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2955C79A8E44DCAA10E5421D /* Pods-iOSTutorials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTutorials.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTutorials/Pods-iOSTutorials.release.xcconfig"; sourceTree = "<group>"; };
+		4A08BAD920A18E57002D9C76 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		4A379FDF2042AD8300591E71 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
 		4A489752207C93850060A900 /* WebSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewController.swift; sourceTree = "<group>"; };
 		4A489756207CAF7C0060A900 /* SocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				4A608578208EE51700761894 /* SwizzleViewController.swift */,
 				4A60857A2090259400761894 /* AuthenticationViewController.swift */,
 				4ACBEFE920946842005DC41E /* CoreMLViewController.swift */,
+				4A08BAD920A18E57002D9C76 /* VideoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				4ACBEFEA20946842005DC41E /* CoreMLViewController.swift in Sources */,
 				4A9F2ADD20415C4400637DE0 /* ZViewController.swift in Sources */,
 				4A9F2AD8204159F700637DE0 /* ThreadViewController.swift in Sources */,
+				4A08BADA20A18E57002D9C76 /* VideoViewController.swift in Sources */,
 				4A60857B2090259400761894 /* AuthenticationViewController.swift in Sources */,
 				4A9F2ADA20415BEA00637DE0 /* HomeViewController.swift in Sources */,
 				4ACE969520417924007E507D /* ConditionThread.swift in Sources */,
